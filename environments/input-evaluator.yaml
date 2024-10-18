@@ -1,0 +1,17 @@
+name: evaluator-0-4-10
+channels:
+  - conda-forge
+  - openeye
+  - defaults
+dependencies:
+  - openff-evaluator =0.4.10
+  - openmm
+  - openmmtools
+  - packmol
+  - rdkit
+  - openeye-toolkits
+  - click
+  - tqdm
+  - seaborn
+  - mdanalysis
+

@@ -1,0 +1,5 @@
+*.out
+*.json
+*.dcd
+run-logs
+copy*.sh
