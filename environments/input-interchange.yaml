@@ -1,0 +1,11 @@
+name: interchange-packmol-040
+channels:
+  - conda-forge
+  - openeye
+  - defaults
+dependencies:
+  - openff-interchange ==0.4.0rc1
+  - openmm
+  - packmol
+  - rdkit
+  - openeye-toolkits
