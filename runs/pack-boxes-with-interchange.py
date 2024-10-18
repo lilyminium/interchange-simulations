@@ -12,6 +12,28 @@ from openff.interchange import Interchange
 
 TARGET_DENSITY = 0.95 * unit.grams / unit.mL
 
+@click.command()
+@click.option(
+    "--input-file",
+    "-i",
+    default="liquid-boxes.json",
+    type=click.Path(file_okay=True, dir_okay=False),
+    help="Input file",
+)
+@click.option(
+    "--force-field",
+    "-ff",
+    default="openff-2.2.1.offxml",
+    type=str,
+    help="Force field",
+)
+@click.option(
+    "--output-directory",
+    "-o",
+    default="n-1000",
+    type=click.Path(file_okay=False, dir_okay=True),
+    help="Output directory",
+)
 def main(
     input_file: str,
     force_field: str,
@@ -54,7 +76,7 @@ def main(
 
         serialized_file = entry_directory / "interchange.json"
         with open(serialized_file, "w") as f:
-            interchange.json(serialized_file, format=True)
+            f.write(interchange.json())
         
         interchange.to_pdb(entry_directory / "input.pdb")
         interchange.to_gro(entry_directory / "input.gro")
