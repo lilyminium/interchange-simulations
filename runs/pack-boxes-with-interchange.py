@@ -58,16 +58,21 @@ def main(
             solute = mols.pop(0).to_topology()
             n_molecules.pop(0)
         
-        solvated_topology = pack_box(
-            molecules=mols,
-            number_of_copies=n_molecules,
-            solute=solute,
-            target_density=TARGET_DENSITY,
-            box_shape=UNIT_CUBE,
-            center_solute=True,
-            working_directory=None,
-            retain_working_files=False,
-        )
+        try:
+            solvated_topology = pack_box(
+                molecules=mols,
+                number_of_copies=n_molecules,
+                solute=solute,
+                target_density=TARGET_DENSITY,
+                box_shape=UNIT_CUBE,
+                center_solute=True,
+                working_directory=None,
+                retain_working_files=False,
+            )
+        except Exception as e:
+            print(f"Failed to pack box {i:04d}")
+            print(e)
+            continue
 
         interchange = Interchange.from_smirnoff(force_field, solvated_topology)
 

@@ -7,6 +7,7 @@ channels:
 dependencies:
   - openff-interchange =0.4
   - openmm
+  - openmmtools
   - packmol
   - rdkit
   - openeye-toolkits
