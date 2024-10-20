@@ -154,8 +154,8 @@ def main(
         n_barostat_steps=n_barostat_steps,
     )
     equilibrated_positions = equilibration.context.getState(getPositions=True).getPositions(asNumpy=True)
-    print(type(equilibrated_positions))
     interchange.positions = from_openmm(equilibrated_positions)
+    interchange.to_pdb(output_directory / f"equilibrated.pdb")
 
     print("Simulating...")
 
@@ -167,7 +167,7 @@ def main(
         timestep=timestep * unit.femtoseconds,
         n_barostat_steps=n_barostat_steps,
     )
-    production_positions = production.context.getState(getPositions=True).getPositions()
+    production_positions = production.context.getState(getPositions=True).getPositions(asNumpy=True)
     interchange.positions = from_openmm(production_positions)
     interchange.to_pdb(input_directory / f"{output_subdirectory}.pdb")
 
