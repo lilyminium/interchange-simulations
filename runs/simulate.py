@@ -1,4 +1,5 @@
 import click
+import tqdm
 import pathlib
 
 import openmm
@@ -74,7 +75,9 @@ def simulate(
             separator=",",
         )
     )
-    simulation.step(n_total_steps)
+    steps = list(range(n_total_steps // 10))
+    for i in tqdm.tqdm(steps):
+        simulation.step(10)
     return simulation
 
 
@@ -150,7 +153,8 @@ def main(
         timestep=timestep * unit.femtoseconds,
         n_barostat_steps=n_barostat_steps,
     )
-    equilibrated_positions = equilibration.context.getState(getPositions=True).getPositions()
+    equilibrated_positions = equilibration.context.getState(getPositions=True).getPositions(asNumpy=True)
+    print(type(equilibrated_positions))
     interchange.positions = from_openmm(equilibrated_positions)
 
     print("Simulating...")

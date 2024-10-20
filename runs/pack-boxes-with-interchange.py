@@ -1,4 +1,5 @@
 import json
+import time
 import pathlib
 import click
 import tqdm
@@ -58,6 +59,7 @@ def main(
             solute = mols.pop(0).to_topology()
             n_molecules.pop(0)
         
+        start_time = time.time()
         try:
             solvated_topology = pack_box(
                 molecules=mols,
@@ -73,6 +75,9 @@ def main(
             print(f"Failed to pack box {i:04d}")
             print(e)
             continue
+        end_time = time.time()
+        difference = end_time - start_time
+        print(f"Entry {i}: {difference}")
 
         interchange = Interchange.from_smirnoff(force_field, solvated_topology)
 
@@ -86,6 +91,10 @@ def main(
         interchange.to_pdb(entry_directory / "input.pdb")
         interchange.to_gro(entry_directory / "input.gro")
         interchange.to_top(entry_directory / "system.top")
+
+        timing = {"time": difference.total_seconds()}
+        with (entry_directory / "time.json").open("r") as f:
+            json.dump(timing, f)
 
 
 if __name__ == "__main__":
