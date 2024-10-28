@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 #SBATCH -J simulate
-#SBATCH --array=0-0%12
+#SBATCH --array=0-1411%300
 #SBATCH -p free
-#SBATCH -t 48:00:00
+#SBATCH -t 72:00:00
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16gb
-#SBATCH --account dmobley_lab
+#SBATCH --account lilyw7
 #SBATCH --output run-logs/slurm-%x.%A-%a.out
 
 . ~/.bashrc

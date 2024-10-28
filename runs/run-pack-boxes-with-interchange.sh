@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH -J pack-boxes
-#SBATCH --array=0-1411%12
+#SBATCH --array=0-1411%100
 #SBATCH -p free
 #SBATCH -t 24:00:00
 #SBATCH --nodes=1
@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16gb
 #SBATCH --account dmobley_lab
-#SBATCH --output run-logs/slurm-%x.%A.out
+#SBATCH --output run-logs/slurm-%x.%A-%a.out
 
 # ===================== conda environment =====================
 . ~/.bashrc

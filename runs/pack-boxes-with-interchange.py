@@ -83,7 +83,7 @@ def main(
             target_density=TARGET_DENSITY,
             box_shape=UNIT_CUBE,
             center_solute=True,
-            working_directory=None,
+            working_directory=".",
             retain_working_files=True,
         )
     except Exception as e:

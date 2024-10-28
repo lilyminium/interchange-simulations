@@ -4,10 +4,14 @@ import pathlib
 
 import openmm
 import openmmtools
+import pandas as pd
+import seaborn as sns
+from matplotlib import pyplot as plt
 
 from openff.units import unit
 from openff.units.openmm import from_openmm, to_openmm
 from openff.interchange import Interchange
+
 
 def create_openmm_simulation(
     interchange: Interchange,
@@ -78,6 +82,21 @@ def simulate(
     steps = list(range(n_total_steps // 10))
     for i in tqdm.tqdm(steps):
         simulation.step(10)
+
+    # plot statistics
+    df = pd.read_csv(f"{name}.csv")
+    cols = [x for x in df.columns if (x != '#"Step"' and "Speed" not in x)]
+    melted = df.melt(
+        id_vars=["Time (ps)"],
+        value_vars=cols,
+        var_name="Quantity",
+        value_name="Value"
+    )
+    g = sns.FacetGrid(melted, col="Quantity", col_wrap=3, sharey=False, sharex=False)
+    g.map(sns.lineplot, "Time (ps)", "Value")
+    g.set_titles("{col_name}")
+    g.savefig(f"{name}_statistics.png", dpi=300)
+
     return simulation
 
 
@@ -153,8 +172,12 @@ def main(
         timestep=timestep * unit.femtoseconds,
         n_barostat_steps=n_barostat_steps,
     )
-    equilibrated_positions = equilibration.context.getState(getPositions=True).getPositions(asNumpy=True)
+    state = equilibration.context.getState(getPositions=True)
+    box_vectors = state.getPeriodicBoxVectors() 
+    equilibrated_positions = state.getPositions(asNumpy=True)
     interchange.positions = from_openmm(equilibrated_positions)
+    interchange.box = from_openmm(box_vectors)
+
     interchange.to_pdb(output_directory / f"equilibrated.pdb")
 
     print("Simulating...")
