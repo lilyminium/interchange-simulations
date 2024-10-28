@@ -1,3 +1,4 @@
 *.out
 *.json
-n-1000/*
+*.dcd
+n-1000/runs/*
