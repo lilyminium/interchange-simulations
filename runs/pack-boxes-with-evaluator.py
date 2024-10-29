@@ -76,7 +76,7 @@ def main(
     
     start_time = time.time()
     try:
-        solvated_topology = pack_box(
+        trajectory, resnames = pack_box(
             molecules=mols,
             number_of_copies=n_molecules,
             structure_to_solvate=None,
@@ -97,13 +97,21 @@ def main(
     difference = end_time - start_time
     print(f"Entry {i}: {difference}")
 
+    topology_molecules = []
+    for mol, n in zip(mols, n_molecules):
+        topology_molecules.extend([mol] * n)
+    solvated_topology = Topology.from_molecules(topology_molecules)
+
     interchange = Interchange.from_smirnoff(force_field, solvated_topology)
+    interchange.positions = (
+        trajectory.xyz[0] * unit.nanometers
+    )
 
     serialized_file = "interchange.json"
     with open(serialized_file, "w") as f:
         f.write(interchange.json())
     
-    interchange.to_pdb("input.pdb")
+    trajectory.save_pdb("input.pdb")
     interchange.to_gro("input.gro")
     interchange.to_top("system.top")
 

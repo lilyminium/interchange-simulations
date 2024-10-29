@@ -19,7 +19,7 @@ conda activate evaluator-0-4-10
 NMOL=1000
 
 if [ ! -f "input.pdb" ] ; then
-    python pack-boxes-with-interchange.py  -i "n-${NMOL}/liquid-boxes.json" -o "n-${NMOL}/runs-evaluator" -idx $SLURM_ARRAY_TASK_ID
+    python pack-boxes-with-evaluator.py  -i "n-${NMOL}/liquid-boxes.json" -o "n-${NMOL}/runs-evaluator" -idx $SLURM_ARRAY_TASK_ID
 fi
 
 
