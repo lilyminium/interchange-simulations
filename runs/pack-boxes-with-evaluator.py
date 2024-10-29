@@ -106,6 +106,8 @@ def main(
     interchange.positions = (
         trajectory.xyz[0] * unit.nanometers
     )
+    print(n_molecules)
+    print(trajectory.xyz.shape)
 
     serialized_file = "interchange.json"
     with open(serialized_file, "w") as f:
