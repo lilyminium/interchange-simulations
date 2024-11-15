@@ -92,6 +92,7 @@ def main(
         error_file =  "error.txt"
         with open(error_file, "w") as f:
             f.write(str(e))
+        raise e
 
     end_time = time.time()
     difference = end_time - start_time

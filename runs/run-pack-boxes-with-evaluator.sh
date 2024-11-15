@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SBATCH -J pack-boxes
-#SBATCH --array=0-1411%100
-#SBATCH -p free
+#SBATCH --array=1248-1248%300
+#SBATCH -p standard
 #SBATCH -t 24:00:00
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
