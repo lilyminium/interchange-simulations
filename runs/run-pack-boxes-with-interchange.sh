@@ -18,9 +18,10 @@ conda activate interchange-packmol-040-final
 # 2000: 1449 boxes
 
 NMOL=1000
+BOXES="boxes-nosort"
 
 if [ ! -f "input.pdb" ] ; then
-    python pack-boxes-with-interchange.py  -i "n-${NMOL}/liquid-boxes.json" -o "n-${NMOL}/runs-interchange-final" -idx $SLURM_ARRAY_TASK_ID
+    python pack-boxes-with-interchange.py  -i "${BOXES}/n-${NMOL}/liquid-boxes.json" -o "${BOXES}/n-${NMOL}/runs-interchange-final" -idx $SLURM_ARRAY_TASK_ID
 fi
 
 

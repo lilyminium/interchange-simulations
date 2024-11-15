@@ -1,0 +1,13 @@
+tolerance 2.000000
+filetype pdb
+output packmol_output.pdb
+
+structure 0.pdb
+  number 510
+  inside box 0. 0. 0. 57.63472087723553 57.63472087723553 57.63472087723553
+end structure
+
+structure 1.pdb
+  number 490
+  inside box 0. 0. 0. 57.63472087723553 57.63472087723553 57.63472087723553
+end structure
