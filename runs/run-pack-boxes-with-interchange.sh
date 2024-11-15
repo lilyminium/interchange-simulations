@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH -J pack-boxes-interchange
-#SBATCH --array=1248-1248%300
+#SBATCH --array=0-1411%400
 #SBATCH -p standard
 #SBATCH -t 24:00:00
 #SBATCH --nodes=1
@@ -19,6 +19,7 @@ conda activate interchange-packmol-040-final
 
 NMOL=1000
 BOXES="boxes-nosort"
+# BOXES="boxes-sorted-by-nmol"
 
 if [ ! -f "input.pdb" ] ; then
     python pack-boxes-with-interchange.py  -i "${BOXES}/n-${NMOL}/liquid-boxes.json" -o "${BOXES}/n-${NMOL}/runs-interchange-final" -idx $SLURM_ARRAY_TASK_ID

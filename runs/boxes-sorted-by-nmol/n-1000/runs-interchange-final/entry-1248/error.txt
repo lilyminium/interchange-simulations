@@ -1,1 +1,0 @@
-PACKMOL failed with error code 173. Wrote file packmol_error.log in working directory, which might be a temporary directory. Set the argument `working_directory` to point this to a persistent path.
