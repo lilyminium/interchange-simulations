@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
-#SBATCH -J simulate-interchange
-#SBATCH --array=1036-1036%300
-#SBATCH -p standard
+#SBATCH -J simulate-interchange-gpu
+#SBATCH --array=0-1411%30
+#SBATCH -p free-gpu
+#SBATCH --gres=gpu:1
 #SBATCH -t 72:00:00
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16gb
-#SBATCH --account dmobley_lab
+#SBATCH --account dmobley_lab_gpu
 #SBATCH --output run-logs/slurm-%x.%A-%a.out
 
 . ~/.bashrc
@@ -24,6 +25,7 @@ TIMESTEP=2
 NBAROSTAT=25
 
 export OE_LICENSE=/data/homezvol3/lilyw7/oe_license.txt
+export CUDA_VISIBLE_DEVICES=0
 
 # get script path before changing directory
 SCRIPT=$(readlink -m simulate.py)

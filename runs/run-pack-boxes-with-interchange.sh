@@ -22,7 +22,8 @@ BOXES="boxes-nosort"
 # BOXES="boxes-sorted-by-nmol"
 
 if [ ! -f "input.pdb" ] ; then
-    python pack-boxes-with-interchange.py  -i "${BOXES}/n-${NMOL}/liquid-boxes.json" -o "${BOXES}/n-${NMOL}/runs-interchange-final" -idx $SLURM_ARRAY_TASK_ID
+    # python pack-boxes-with-interchange.py  -i "${BOXES}/n-${NMOL}/liquid-boxes.json" -o "${BOXES}/n-${NMOL}/runs-interchange-final" -idx $SLURM_ARRAY_TASK_ID
+    python pack-boxes-with-interchange.py  -i "${BOXES}/n-${NMOL}/liquid-boxes.json" -o "${BOXES}/n-${NMOL}/runs-interchange-multiconf" -idx $SLURM_ARRAY_TASK_ID
 fi
 
 

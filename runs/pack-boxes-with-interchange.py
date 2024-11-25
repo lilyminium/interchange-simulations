@@ -61,7 +61,7 @@ def main(
         Molecule.from_smiles(smiles, allow_undefined_stereo=True) for smiles in box["smiles"]
     ]
     for mol in mols:
-        mol.generate_conformers(n_conformers=1)
+        mol.generate_conformers()
 
     n_molecules = box["n_molecules"]
 
