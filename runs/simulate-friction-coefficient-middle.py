@@ -28,10 +28,10 @@ def create_openmm_simulation(
     n_barostat_steps: int = 25,
 ):
     collision_rate = friction_coefficient / unit.picoseconds
-    integrator = openmmtools.integrators.LangevinIntegrator(
-        temperature=to_openmm(temperature),
-        collision_rate=to_openmm(collision_rate),
-        timestep=to_openmm(timestep),
+    integrator = openmm.openmm.LangevinMiddleIntegrator(
+        to_openmm(temperature),
+        to_openmm(collision_rate),
+        to_openmm(timestep),
     )
     barostat = openmm.MonteCarloBarostat(
         to_openmm(pressure),

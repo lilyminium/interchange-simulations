@@ -25,14 +25,14 @@ NPROD=1000000
 # NPROD=1000000
 TIMESTEP='2.0'
 NBAROSTAT=25
-FRICTION_COEFFICIENT='0.1'
+FRICTION_COEFFICIENT=1
 
 
 export OE_LICENSE=/data/homezvol3/lilyw7/oe_license.txt
 export CUDA_VISIBLE_DEVICES=0
 
 # get script path before changing directory
-SCRIPT=$(readlink -m simulate-friction-coefficient.py)
+SCRIPT=$(readlink -m simulate-friction-coefficient-middle.py)
 
 # save the conda environment
 conda env export > simulation-env.yaml
@@ -50,7 +50,7 @@ cd $OUTPUT_DIRECTORY
 
 # Run the commands
 # only run if final file doesn't already exist
-python $SCRIPT -i . -ne $NEQ -np $NPROD -dt $TIMESTEP -nb $NBAROSTAT -fc $FRICTION_COEFFICIENT
+python $SCRIPT -i . -ne $NEQ -np $NPROD -dt $TIMESTEP -nb $NBAROSTAT -fc $FRICTION_COEFFICIENT -sf "_middle"
 
 echo "done"
 
