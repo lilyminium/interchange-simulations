@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#SBATCH -J simulate-interchange-gpu
-#SBATCH --array=1-1%30
-#SBATCH -p free-gpu
+#SBATCH -J simulate-friction-coefficient
+#SBATCH --array=1036-1036%30
+#SBATCH -p gpu
 #SBATCH --gres=gpu:1
 #SBATCH -t 24:00:00
 #SBATCH --nodes=1
@@ -25,13 +25,14 @@ NPROD=1000000
 # NPROD=1000000
 TIMESTEP='2.0'
 NBAROSTAT=25
-# NBAROSTAT=5
+FRICTION_COEFFICIENT=5
+
 
 export OE_LICENSE=/data/homezvol3/lilyw7/oe_license.txt
 export CUDA_VISIBLE_DEVICES=0
 
 # get script path before changing directory
-SCRIPT=$(readlink -m simulate.py)
+SCRIPT=$(readlink -m simulate-friction-coefficient.py)
 
 # save the conda environment
 conda env export > simulation-env.yaml
@@ -49,11 +50,7 @@ cd $OUTPUT_DIRECTORY
 
 # Run the commands
 # only run if final file doesn't already exist
-FINAL_FILE="ne-${NEQ}_np-${NPROD}_dt-${TIMESTEP}_nb-${NBAROSTAT}.pdb"
-if [ ! -f $FINAL_FILE ]; then
-    # echo $FINAL_FILE
-    python $SCRIPT -i . -ne $NEQ -np $NPROD -dt $TIMESTEP -nb $NBAROSTAT
-fi
+python $SCRIPT -i . -ne $NEQ -np $NPROD -dt $TIMESTEP -nb $NBAROSTAT -fc $FRICTION_COEFFICIENT
 
 echo "done"
 

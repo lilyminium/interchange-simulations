@@ -21,12 +21,13 @@ logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
 
 def create_openmm_simulation(
     interchange: Interchange,
+    friction_coefficient: int = 1,
     temperature: unit.Quantity = 298.15 * unit.kelvin,
     pressure: unit.Quantity = 1.0 * unit.atmospheres,
-    collision_rate: unit.Quantity = 1.0 / unit.picoseconds,
     timestep: unit.Quantity = 2.0 * unit.femtoseconds,  # 2 fs
     n_barostat_steps: int = 25,
 ):
+    collision_rate = friction_coefficient / unit.picoseconds
     integrator = openmmtools.integrators.LangevinIntegrator(
         temperature=to_openmm(temperature),
         collision_rate=to_openmm(collision_rate),
@@ -47,9 +48,9 @@ def create_openmm_simulation(
 def simulate(
     interchange: Interchange,
     name: str,
+    friction_coefficient: int = 1,
     temperature: unit.Quantity = 298.15 * unit.kelvin,
     pressure: unit.Quantity = 1.0 * unit.atmospheres,
-    collision_rate: unit.Quantity = 1.0 / unit.picoseconds,
     timestep: unit.Quantity = 2.0 * unit.femtoseconds,  # 2 fs
     n_barostat_steps: int = 25,
     n_total_steps: int = 1000000,
@@ -57,9 +58,9 @@ def simulate(
 ):
     simulation = create_openmm_simulation(
         interchange,
+        friction_coefficient=friction_coefficient,
         temperature=temperature,
         pressure=pressure,
-        collision_rate=collision_rate,
         timestep=timestep,
         n_barostat_steps=n_barostat_steps,
     )
@@ -142,18 +143,39 @@ def simulate(
     type=int,
     help="Number of barostat steps",
 )
+@click.option(
+    "--friction-coefficient",
+    "-fc",
+    default=1,
+    type=int,
+    help="Friction coefficient"
+)
+@click.option(
+    "--suffix",
+    "-sf",
+    default="",
+    type=str,
+    help="suffix",
+)
 def main(
     input_directory: str,
+    friction_coefficient: int = 1,
     n_equilibration_steps: int = 100000,
     n_production_steps: int = 1000000,
     timestep: float = 2.0,
     n_barostat_steps: int = 25,
+    suffix: str = ""
 ):
 
     input_directory = pathlib.Path(input_directory)
-    output_subdirectory = f"ne-{n_equilibration_steps}_np-{n_production_steps}_dt-{timestep}_nb-{n_barostat_steps}"
+    output_subdirectory = f"ne-{n_equilibration_steps}_np-{n_production_steps}_dt-{timestep}_nb-{n_barostat_steps}_fc-{friction_coefficient}{suffix}"
     output_directory = input_directory / output_subdirectory
     output_directory.mkdir(exist_ok=True, parents=True)
+    # quit early if file exists
+    output_file = input_directory / f"{output_subdirectory}.pdb"
+    if output_file.exists():
+        print(f"{output_file} exists")
+        return
 
     interchange = Interchange.parse_file(input_directory / "interchange.json")
     
@@ -173,6 +195,7 @@ def main(
     # equilibrate
     equilibration = simulate(
         interchange,
+        friction_coefficient=friction_coefficient,
         name=output_directory / "equilibration",
         n_total_steps=n_equilibration_steps,
         timestep=timestep * unit.femtoseconds,
@@ -191,6 +214,7 @@ def main(
     # simulate
     production = simulate(
         interchange,
+        friction_coefficient=friction_coefficient,
         name=output_directory / "production",
         n_total_steps=n_production_steps,
         timestep=timestep * unit.femtoseconds,
@@ -198,7 +222,7 @@ def main(
     )
     production_positions = production.context.getState(getPositions=True).getPositions(asNumpy=True)
     interchange.positions = from_openmm(production_positions)
-    interchange.to_pdb(input_directory / f"{output_subdirectory}.pdb")
+    interchange.to_pdb(output_file)
 
 
 if __name__ == "__main__":
