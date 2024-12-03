@@ -22,9 +22,10 @@ if __name__ == "__main__":
         number_of_copies=[2000],
         solute=off_top,
         tolerance=2.0*unit.angstrom,
-        target_density=0.95 * unit.gram/unit.milliliter,
+        mass_density=0.95 * unit.gram/unit.milliliter,
         box_shape=UNIT_CUBE,
         center_solute=True,
         working_directory='success',
         retain_working_files=True,
     )
+    print("succeeded -- success")

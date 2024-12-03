@@ -11,7 +11,8 @@
 
 # ===================== conda environment =====================
 . ~/.bashrc
-conda activate interchange-packmol-040-final
+# conda activate interchange-packmol-040-final
+conda activate openff-nagl-test
 
 mkdir failure
 python pack-fail.py

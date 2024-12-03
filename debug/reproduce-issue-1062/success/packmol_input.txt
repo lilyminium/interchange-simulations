@@ -1,0 +1,13 @@
+tolerance 2.000000
+filetype pdb
+output packmol_output.pdb
+
+structure solvate.pdb
+  number 1
+  fixed 0. 0. 0. 0. 0. 0.
+end structure
+
+structure 0.pdb
+  number 2000
+  inside box 0. 0. 0. 61.75304189384955 61.75304189384955 61.75304189384955
+end structure
