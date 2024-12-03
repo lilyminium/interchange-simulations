@@ -1,1 +1,3 @@
-runs-*/
+*.dcd
+*.json
+runs-interchange-final
