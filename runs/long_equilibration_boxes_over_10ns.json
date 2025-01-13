@@ -1,0 +1,1265 @@
+[
+    {
+        "smiles": [
+            "CCN",
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 312
+    },
+    {
+        "smiles": [
+            "OCCN(CCO)CCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 125
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            1187,
+            813
+        ],
+        "id": 1138
+    },
+    {
+        "smiles": [
+            "C1COCCN1",
+            "O"
+        ],
+        "n_molecules": [
+            1586,
+            414
+        ],
+        "id": 1406
+    },
+    {
+        "smiles": [
+            "NCCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1503,
+            497
+        ],
+        "id": 1312
+    },
+    {
+        "smiles": [
+            "CN(CCO)CCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 82
+    },
+    {
+        "smiles": [
+            "NCCNCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1540,
+            460
+        ],
+        "id": 1366
+    },
+    {
+        "smiles": [
+            "NCCNCCO",
+            "O"
+        ],
+        "n_molecules": [
+            799,
+            1201
+        ],
+        "id": 831
+    },
+    {
+        "smiles": [
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 127
+    },
+    {
+        "smiles": [
+            "OCCOCCO",
+            "OCc1ccccc1"
+        ],
+        "n_molecules": [
+            1062,
+            938
+        ],
+        "id": 1110
+    },
+    {
+        "smiles": [
+            "NCCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1416,
+            584
+        ],
+        "id": 1195
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN(CCO)CCO"
+        ],
+        "n_molecules": [
+            1020,
+            980
+        ],
+        "id": 1060
+    },
+    {
+        "smiles": [
+            "NCCCNCCCN",
+            "O"
+        ],
+        "n_molecules": [
+            1000,
+            1000
+        ],
+        "id": 982
+    },
+    {
+        "smiles": [
+            "NCCNCCN"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 113
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            516,
+            1484
+        ],
+        "id": 732
+    },
+    {
+        "smiles": [
+            "O",
+            "OCC(O)CO"
+        ],
+        "n_molecules": [
+            438,
+            1562
+        ],
+        "id": 594
+    },
+    {
+        "smiles": [
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 126
+    },
+    {
+        "smiles": [
+            "CO",
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 383
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            1030,
+            970
+        ],
+        "id": 1083
+    },
+    {
+        "smiles": [
+            "OCC(O)CO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 123
+    },
+    {
+        "smiles": [
+            "NCCNCCN",
+            "O"
+        ],
+        "n_molecules": [
+            490,
+            1510
+        ],
+        "id": 668
+    },
+    {
+        "smiles": [
+            "O",
+            "OCC(O)CO"
+        ],
+        "n_molecules": [
+            501,
+            1499
+        ],
+        "id": 704
+    },
+    {
+        "smiles": [
+            "NCCNCCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 114
+    },
+    {
+        "smiles": [
+            "OCCOCCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 129
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN(CCO)CCO"
+        ],
+        "n_molecules": [
+            1587,
+            413
+        ],
+        "id": 1410
+    },
+    {
+        "smiles": [
+            "CCCN",
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 297
+    },
+    {
+        "smiles": [
+            "C1CCCC1",
+            "CCCCCCCO"
+        ],
+        "n_molecules": [
+            393,
+            1607
+        ],
+        "id": 534
+    },
+    {
+        "smiles": [
+            "CCC(C)(C)O"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 35
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            600,
+            1400
+        ],
+        "id": 818
+    },
+    {
+        "smiles": [
+            "CCOc1ccccc1",
+            "OCCCc1ccccc1"
+        ],
+        "n_molecules": [
+            433,
+            1567
+        ],
+        "id": 587
+    },
+    {
+        "smiles": [
+            "CCCCCO",
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 280
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCOCCO"
+        ],
+        "n_molecules": [
+            419,
+            1581
+        ],
+        "id": 576
+    },
+    {
+        "smiles": [
+            "CN1CCNCC1",
+            "O"
+        ],
+        "n_molecules": [
+            1100,
+            900
+        ],
+        "id": 1131
+    },
+    {
+        "smiles": [
+            "Nc1ccccc1",
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 464
+    },
+    {
+        "smiles": [
+            "CCCCCCC",
+            "CNc1ccccc1"
+        ],
+        "n_molecules": [
+            1003,
+            997
+        ],
+        "id": 1004
+    },
+    {
+        "smiles": [
+            "CC(C)(C)O",
+            "OC1=NCCC1"
+        ],
+        "n_molecules": [
+            1502,
+            498
+        ],
+        "id": 1305
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN(CCO)CCO"
+        ],
+        "n_molecules": [
+            580,
+            1420
+        ],
+        "id": 795
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            1006,
+            994
+        ],
+        "id": 1023
+    },
+    {
+        "smiles": [
+            "CN(CCO)CCO",
+            "O"
+        ],
+        "n_molecules": [
+            1482,
+            518
+        ],
+        "id": 1257
+    },
+    {
+        "smiles": [
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 60
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            1002,
+            998
+        ],
+        "id": 1002
+    },
+    {
+        "smiles": [
+            "COCCO",
+            "CCCCOP(=O)(OCCCC)OCCCC"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 401
+    },
+    {
+        "smiles": [
+            "Cc1ccccc1N"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 100
+    },
+    {
+        "smiles": [
+            "CN(C)CCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1003,
+            997
+        ],
+        "id": 1005
+    },
+    {
+        "smiles": [
+            "NCCNCCN",
+            "O"
+        ],
+        "n_molecules": [
+            995,
+            1005
+        ],
+        "id": 925
+    },
+    {
+        "smiles": [
+            "NCCNCCN",
+            "O"
+        ],
+        "n_molecules": [
+            1002,
+            998
+        ],
+        "id": 1001
+    },
+    {
+        "smiles": [
+            "NCCCNCCCN",
+            "O"
+        ],
+        "n_molecules": [
+            601,
+            1399
+        ],
+        "id": 819
+    },
+    {
+        "smiles": [
+            "CN(C)CCCO",
+            "O"
+        ],
+        "n_molecules": [
+            579,
+            1421
+        ],
+        "id": 794
+    },
+    {
+        "smiles": [
+            "CCCCC",
+            "COC=O"
+        ],
+        "n_molecules": [
+            988,
+            1012
+        ],
+        "id": 910
+    },
+    {
+        "smiles": [
+            "NCCNCCN",
+            "O"
+        ],
+        "n_molecules": [
+            1398,
+            602
+        ],
+        "id": 1150
+    },
+    {
+        "smiles": [
+            "NCCNCCN",
+            "O"
+        ],
+        "n_molecules": [
+            1404,
+            596
+        ],
+        "id": 1178
+    },
+    {
+        "smiles": [
+            "Nc1ccccc1"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 116
+    },
+    {
+        "smiles": [
+            "OCCc1ccccc1"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 130
+    },
+    {
+        "smiles": [
+            "CCNCC",
+            "CCCCCO"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 318
+    },
+    {
+        "smiles": [
+            "CNCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1602,
+            398
+        ],
+        "id": 1428
+    },
+    {
+        "smiles": [
+            "OCCOCCO",
+            "OCc1ccccc1"
+        ],
+        "n_molecules": [
+            1532,
+            468
+        ],
+        "id": 1355
+    },
+    {
+        "smiles": [
+            "NCCNCCO",
+            "O"
+        ],
+        "n_molecules": [
+            800,
+            1200
+        ],
+        "id": 832
+    },
+    {
+        "smiles": [
+            "CN1CCNCC1",
+            "O"
+        ],
+        "n_molecules": [
+            1022,
+            978
+        ],
+        "id": 1064
+    },
+    {
+        "smiles": [
+            "CN(C)CCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1004,
+            996
+        ],
+        "id": 1014
+    },
+    {
+        "smiles": [
+            "NCCNCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1599,
+            401
+        ],
+        "id": 1422
+    },
+    {
+        "smiles": [
+            "CN(C)CCCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 80
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            1411,
+            589
+        ],
+        "id": 1189
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            610,
+            1390
+        ],
+        "id": 822
+    },
+    {
+        "smiles": [
+            "CCCCCCC",
+            "CNc1ccccc1"
+        ],
+        "n_molecules": [
+            1406,
+            594
+        ],
+        "id": 1181
+    },
+    {
+        "smiles": [
+            "CN(CCO)CCO",
+            "O"
+        ],
+        "n_molecules": [
+            1486,
+            514
+        ],
+        "id": 1264
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            1507,
+            493
+        ],
+        "id": 1322
+    },
+    {
+        "smiles": [
+            "O",
+            "OC1=NCCC1"
+        ],
+        "n_molecules": [
+            1506,
+            494
+        ],
+        "id": 1319
+    },
+    {
+        "smiles": [
+            "OCCOCCO",
+            "OCc1ccccc1"
+        ],
+        "n_molecules": [
+            1455,
+            545
+        ],
+        "id": 1218
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            512,
+            1488
+        ],
+        "id": 726
+    },
+    {
+        "smiles": [
+            "ClCCCCCCCl"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 105
+    },
+    {
+        "smiles": [
+            "CC(=O)C(C)=O"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 14
+    },
+    {
+        "smiles": [
+            "CCN(CC)CCO",
+            "O"
+        ],
+        "n_molecules": [
+            1000,
+            1000
+        ],
+        "id": 978
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCNCCO"
+        ],
+        "n_molecules": [
+            1429,
+            571
+        ],
+        "id": 1202
+    },
+    {
+        "smiles": [
+            "BrCCBr"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 0
+    },
+    {
+        "smiles": [
+            "C=C(C)[C@H]1CC=C(C)CC1",
+            "CCCCCO"
+        ],
+        "n_molecules": [
+            1087,
+            913
+        ],
+        "id": 1123
+    },
+    {
+        "smiles": [
+            "C1CCCCC1",
+            "CN1CCCC1=O"
+        ],
+        "n_molecules": [
+            1082,
+            918
+        ],
+        "id": 1119
+    },
+    {
+        "smiles": [
+            "O",
+            "OC1=NCCC1"
+        ],
+        "n_molecules": [
+            461,
+            1539
+        ],
+        "id": 620
+    },
+    {
+        "smiles": [
+            "CN(C)C=O",
+            "ClCCCCCCCl"
+        ],
+        "n_molecules": [
+            403,
+            1597
+        ],
+        "id": 559
+    },
+    {
+        "smiles": [
+            "C1CCCCC1",
+            "CN1CCCC1=O"
+        ],
+        "n_molecules": [
+            1466,
+            534
+        ],
+        "id": 1232
+    },
+    {
+        "smiles": [
+            "NCCCNCCCN"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 111
+    },
+    {
+        "smiles": [
+            "CCCCC",
+            "COC=O"
+        ],
+        "n_molecules": [
+            482,
+            1518
+        ],
+        "id": 652
+    },
+    {
+        "smiles": [
+            "O",
+            "OC1=NCCC1"
+        ],
+        "n_molecules": [
+            1536,
+            464
+        ],
+        "id": 1365
+    },
+    {
+        "smiles": [
+            "CNC=O",
+            "Cc1ccccc1N"
+        ],
+        "n_molecules": [
+            1038,
+            962
+        ],
+        "id": 1095
+    },
+    {
+        "smiles": [
+            "CC(C)CC(C)(C)C",
+            "CCCO"
+        ],
+        "n_molecules": [
+            401,
+            1599
+        ],
+        "id": 553
+    },
+    {
+        "smiles": [
+            "CCC(C)(C)O",
+            "CCOC(C)(C)CC"
+        ],
+        "n_molecules": [
+            599,
+            1401
+        ],
+        "id": 815
+    },
+    {
+        "smiles": [
+            "OCCOCCO",
+            "OCc1ccccc1"
+        ],
+        "n_molecules": [
+            1043,
+            957
+        ],
+        "id": 1101
+    },
+    {
+        "smiles": [
+            "CN1CCCC1=O",
+            "ClCCCCCl"
+        ],
+        "n_molecules": [
+            1401,
+            599
+        ],
+        "id": 1167
+    },
+    {
+        "smiles": [
+            "Cc1ccccc1O",
+            "CCCCCC(C)C"
+        ],
+        "n_molecules": [
+            1,
+            1999
+        ],
+        "id": 436
+    },
+    {
+        "smiles": [
+            "CN(CCO)CCO",
+            "O"
+        ],
+        "n_molecules": [
+            970,
+            1030
+        ],
+        "id": 878
+    },
+    {
+        "smiles": [
+            "OCCCc1ccccc1"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 124
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCN1CCOCC1"
+        ],
+        "n_molecules": [
+            1400,
+            600
+        ],
+        "id": 1161
+    },
+    {
+        "smiles": [
+            "CN(CCO)CCO",
+            "c1ccncc1"
+        ],
+        "n_molecules": [
+            1339,
+            661
+        ],
+        "id": 1142
+    },
+    {
+        "smiles": [
+            "CN(CCO)CCO",
+            "c1ccncc1"
+        ],
+        "n_molecules": [
+            947,
+            1053
+        ],
+        "id": 849
+    },
+    {
+        "smiles": [
+            "CC(C)O",
+            "CCOC(=O)CC(=O)OCC"
+        ],
+        "n_molecules": [
+            400,
+            1600
+        ],
+        "id": 548
+    },
+    {
+        "smiles": [
+            "CN1CCNCC1",
+            "O"
+        ],
+        "n_molecules": [
+            418,
+            1582
+        ],
+        "id": 574
+    },
+    {
+        "smiles": [
+            "CCC(C)(C)O",
+            "CCO"
+        ],
+        "n_molecules": [
+            1461,
+            539
+        ],
+        "id": 1225
+    },
+    {
+        "smiles": [
+            "CN(C)CCCO",
+            "O"
+        ],
+        "n_molecules": [
+            1600,
+            400
+        ],
+        "id": 1424
+    },
+    {
+        "smiles": [
+            "C1COCCN1"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 9
+    },
+    {
+        "smiles": [
+            "CN1CCNCC1",
+            "O"
+        ],
+        "n_molecules": [
+            1585,
+            415
+        ],
+        "id": 1405
+    },
+    {
+        "smiles": [
+            "CC(=O)CC(C)C",
+            "CCC(C)(C)O"
+        ],
+        "n_molecules": [
+            403,
+            1597
+        ],
+        "id": 558
+    },
+    {
+        "smiles": [
+            "CNc1ccccc1"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 89
+    },
+    {
+        "smiles": [
+            "CC1CCCCC1",
+            "CCCO"
+        ],
+        "n_molecules": [
+            1501,
+            499
+        ],
+        "id": 1304
+    },
+    {
+        "smiles": [
+            "O",
+            "OC1=NCCC1"
+        ],
+        "n_molecules": [
+            1000,
+            1000
+        ],
+        "id": 983
+    },
+    {
+        "smiles": [
+            "BrCCBr",
+            "COC=O"
+        ],
+        "n_molecules": [
+            1515,
+            485
+        ],
+        "id": 1333
+    },
+    {
+        "smiles": [
+            "BrCCBr",
+            "COC(C)=O"
+        ],
+        "n_molecules": [
+            1507,
+            493
+        ],
+        "id": 1320
+    },
+    {
+        "smiles": [
+            "O",
+            "OC1=NCCC1"
+        ],
+        "n_molecules": [
+            1043,
+            957
+        ],
+        "id": 1100
+    },
+    {
+        "smiles": [
+            "CCCCCCCl"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 51
+    },
+    {
+        "smiles": [
+            "CN1CCCC1=O",
+            "ClCCCCCl"
+        ],
+        "n_molecules": [
+            407,
+            1593
+        ],
+        "id": 568
+    },
+    {
+        "smiles": [
+            "C1CCOCC1",
+            "CCO"
+        ],
+        "n_molecules": [
+            1000,
+            1000
+        ],
+        "id": 960
+    },
+    {
+        "smiles": [
+            "O",
+            "OCCOCCO"
+        ],
+        "n_molecules": [
+            599,
+            1401
+        ],
+        "id": 817
+    },
+    {
+        "smiles": [
+            "C1CCCCC1",
+            "CN1CCCC1=O"
+        ],
+        "n_molecules": [
+            1504,
+            496
+        ],
+        "id": 1313
+    },
+    {
+        "smiles": [
+            "CCCCCCC",
+            "CNc1ccccc1"
+        ],
+        "n_molecules": [
+            994,
+            1006
+        ],
+        "id": 921
+    },
+    {
+        "smiles": [
+            "CCC(C)=O",
+            "CCN(CC)CC"
+        ],
+        "n_molecules": [
+            1021,
+            979
+        ],
+        "id": 1062
+    },
+    {
+        "smiles": [
+            "C=C(C)[C@H]1CC=C(C)CC1",
+            "CCCCCO"
+        ],
+        "n_molecules": [
+            1450,
+            550
+        ],
+        "id": 1211
+    },
+    {
+        "smiles": [
+            "CC(=O)N(C)C",
+            "ClCCCCCl"
+        ],
+        "n_molecules": [
+            422,
+            1578
+        ],
+        "id": 580
+    },
+    {
+        "smiles": [
+            "OCCO"
+        ],
+        "n_molecules": [
+            2000
+        ],
+        "id": 128
+    },
+    {
+        "smiles": [
+            "CCC(C)=O",
+            "Nc1ccccc1"
+        ],
+        "n_molecules": [
+            513,
+            1487
+        ],
+        "id": 727
+    },
+    {
+        "smiles": [
+            "BrCCBr",
+            "CCC(=O)OC"
+        ],
+        "n_molecules": [
+            1457,
+            543
+        ],
+        "id": 1220
+    },
+    {
+        "smiles": [
+            "C1CCCCC1",
+            "CCCCCC"
+        ],
+        "n_molecules": [
+            966,
+            1034
+        ],
+        "id": 871
+    }
+]
