@@ -11,17 +11,25 @@ Box specifications were generated [by multiplying the mole fraction of each subs
 The script generates box specifications as a list of dictionaries specifying the SMILES of each molecule and the number of each molecule.
 An example file is [liquid-boxes.json](runs/boxes-nosort/n-2000/liquid-boxes.json).
 
+## Environment
+
+A full environment file [is provided](runs/simulation-env.yaml).
+Simulations used OpenMM 8.1.1 and OpenFF Interchange 0.4.0.
+
 ## Box packing
 
 When only one conformer is generated per compound, boxes can be generally and broadly packed using
 the Interchange Packmol wrapper for all compounds, using default arguments.
 
-From the Interchange release *after* 0.4.10, this should be default behaviour.
+From the Interchange release *after* 0.4.0, this should be default behaviour.
 
 ## Simulation
 
 There were no issues running equilibration and productions simulations using Interchange-created systems and packed boxes,
 without and with HMR (latter not uploaded).
+
+The simulation code used is [here](runs/simulate-general-middle.py).
+All results described later do not include HMR and use 2000 molecules per box.
 
 ## Equilibration
 
